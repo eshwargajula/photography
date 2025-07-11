@@ -198,29 +198,46 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="border-t border-white/20 mt-12 sm:mt-16 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
-        >
-          <div className="flex items-center gap-2 text-center md:text-left">
-            <p className="text-white/70 text-xs sm:text-sm">
-              &copy; {new Date().getFullYear()} Elena Rodriguez Photography. All rights reserved.
-            </p>
-            <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-400" />
-          </div>
-          <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm">
-            <Link href="/privacy" className="text-white/70 hover:text-yellow-400 transition-colors duration-200">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-white/70 hover:text-yellow-400 transition-colors duration-200">
-              Terms of Service
-            </Link>
-          </div>
-        </motion.div>
+        {/* Bottom Bar */}
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+  viewport={{ once: true }}
+  className="border-t border-white/20 mt-12 sm:mt-16 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+>
+  <div className="flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
+    <p className="text-white/70 text-xs sm:text-sm">
+      &copy; {new Date().getFullYear()} Elena Rodriguez Photography. All rights reserved.
+    </p>
+    <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-400" />
+  </div>
+
+  <p className="text-white/60 text-xs sm:text-sm text-center md:text-left">
+    Developed by{" "}
+    <a
+      href="https://www.bespokesoftware.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-yellow-400 hover:underline"
+    >
+      Bespoke Software Solutions
+    </a>
+  </p>
+
+  <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm">
+    <Link href="/privacy" className="text-white/70 hover:text-yellow-400 transition-colors duration-200">
+      Privacy Policy
+    </Link>
+    <Link href="/terms" className="text-white/70 hover:text-yellow-400 transition-colors duration-200">
+      Terms of Service
+    </Link>
+  </div>
+</motion.div>
+
+        
       </div>
+      
     </footer>
   )
 }
